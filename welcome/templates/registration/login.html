@@ -1,0 +1,36 @@
+{% extends 'base_bootstrap.html' %}
+
+{% block content %}
+
+    <div class="login_form">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            
+            <div class="div_without_buttons">
+                {{ form.as_p }} 
+            </div>
+                
+
+            <div class="login_btn_div"><input type="submit" class="btn btn-primary login_btn" value="Login"/></div>    
+            
+            <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+    </div>
+        
+        <!--
+        <div>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-primary" value="Login"/>
+            <input type="hidden" name="next" value="{{ next }}"/>
+        </form>
+        </div>
+
+
+    -->
+    
+
+
+
+{% endblock %}

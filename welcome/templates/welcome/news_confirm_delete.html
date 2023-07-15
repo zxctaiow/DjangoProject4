@@ -1,0 +1,18 @@
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+
+<div style="text-align: center; margin-top: 50px; margin-bottom: 30%;">
+  <h1>Delete News</h1>
+
+  <p style="font-size: 25px">Are you sure you want to delete the make: {{ news }}?</p>
+  
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input style="width: 100px; height: 25px;" type="submit" value="Yes, delete.">
+    <input style="width: 100px; height: 25px;" type="submit" onclick="window.location='{% url 'welcome:news' %}' ; return false;" value="Cancel">
+  </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base_bootstrap.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if news_info %}
+    <div style="margin: 10px;">
+        <div class="AddButton">
+            <a href="{% url 'welcome:delete' news_info.id %}"><img style="margin-bottom: 20px;" src="{% static 'images/trash-bin.png' %}" width="60" alt="but"></a>
+        </div>
+
+        <div class="news_detail_class">
+        
+        
+            <span class="text_title">{{ news_info.news_title }}</span>
+            <br>
+            <br>
+            <span>{{ news_info.news_text }}</span>    
+        
+
+        </div>
+        <div class="news_comments">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.topic.as_hidden }}
+                {{ form.comment_text }}
+                <span>
+                    <input type="submit" value="Submit">
+                </span> 
+            </form>
+
+            {% if news_comments %}
+
+                {% for comment in news_comments %}
+
+                    {{ comment.comment_text }} <a href="#">Delete</a>
+                    <br>
+
+                {% endfor %}
+
+            {% endif %}
+
+        </div>
+    </div>
+
+
+
+
+        
+
+
+{% endif %}
+
+{% endblock %}

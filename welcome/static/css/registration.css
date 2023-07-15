@@ -1,0 +1,37 @@
+.login_form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 100px 0;
+}
+
+form input{
+    margin-top: 10px;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.login_btn{
+    background-color: rgba(16, 89, 141, 0.59);
+    border: 1px solid black;
+    color: white;                       
+    width: 100px;
+    border-radius: 15px;
+    transition: all 0.5s ease 0s;
+    height: 30px;
+}
+
+.login_btn:hover{
+    width: 150px;
+    cursor: pointer;
+    background-color: rgb(3, 68, 113);
+}
+
+.div_without_buttons input{
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+}

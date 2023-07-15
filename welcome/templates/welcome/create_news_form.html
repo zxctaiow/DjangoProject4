@@ -1,0 +1,16 @@
+{% extends 'base_bootstrap.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div style="margin: 100px">
+        <form style="display: flex; flex-direction: column; align-items: center;" action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <span style="display: flex; justify-content: center;">
+                <input style="margin: 5px; width: 100px; height: 25px;" type="submit" value="Submit">
+                <input style="margin: 5px; width: 100px; height: 25px;" type="submit" onclick="window.location='{% url 'welcome:news' %}' ; return false;" value="Cancel">
+            </span> 
+        </form>
+    </div>
+        
+{% endblock %}

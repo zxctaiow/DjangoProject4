@@ -1,0 +1,33 @@
+{% extends 'base_bootstrap.html' %}
+{% load static %}
+
+{% block content %}
+    <div>
+        <div class="AddButton">
+            <a href="{% url 'welcome:create' %}"><img style="margin-bottom: 20px;" src="{% static 'images/plus.png' %}" width="60" alt="but"></a>
+        </div>
+        {% if newss %}
+            <div class="news_container">
+                {% for news in newss %}
+                    <div class="news_box">
+                        <span class="news_square"><a href="{% url 'welcome:detail' news.id %}">{{ news }}</a></a></span>
+                    </div>
+                {% endfor %}
+            </div>    
+                
+
+            <!--
+            <ul>
+                {% for news in newss %}
+                    <li>
+                        <a class="news_link" href="{% url 'welcome:detail' news.id %}">{{ news.news_title }}</a>
+                    </li>
+                    <br>
+                {% endfor %}
+            </ul>
+            -->
+
+        {% endif %}
+    </div>
+
+{% endblock %}

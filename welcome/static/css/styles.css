@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+main{
+    padding: 10px;
+    background-color: #F4F3F8;
+}
+
+.navbar {
+    display: flex;
+    padding:15px 15px;
+    background-color: #24262b;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav li{
+    font-family: "Merriweather", sans-serif;
+    font-weight: 400;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+nav a{
+    font-family: "Merriweather", sans-serif;
+    font-weight: 400;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+nav button{
+    font-family: "Merriweather", sans-serif;
+    font-weight: 400;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+
+.name {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+
+.nav__links li a:hover {
+    color: #0088a9;
+}
+
+header button {
+    padding: 9px 25px;
+    background-color: rgb(43, 43, 69);
+    border: none;
+    border-radius: 10px;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+}
+
+header button:hover {
+    background-color: rgba(105, 105, 234,0.8);;
+}
+
+
+
+
+
+.AddButton {
+    margin: 0px;
+    float: right;
+}
+.AddButton:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+.form-control-for-title{
+    width: 400px;
+    margin: 1px;
+    font-size: 25px;
+}
+
+.form-control-for-text{
+    width: 70%;
+    margin: 1px;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+.news_detail_class{
+
+    font-size: 20px;
+    text-align: left;
+    margin: 10px;
+    margin-bottom: 20px;
+    font-family: "Merriweather", sans-serif;
+    font-weight: 500;
+}
+
+.text_title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+
+.news_link{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.2s ease 0s;
+    margin-left: 0.5rem;
+}
+.news_link:hover{
+    padding-left: 10px;
+}
+.news_link:visited{
+    text-decoration: none;
+}
